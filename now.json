@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "MONGO_DB_LINK": "@mongo-db-link"
+    }
+  }
+}

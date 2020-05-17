@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "mongoose": "^5.9.14",
     "next": "9.4.0",
     "number-to-words": "^1.2.4",
     "react": "16.13.1",
