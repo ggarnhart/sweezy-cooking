@@ -1,10 +1,12 @@
 /** colors **/
 .spotify-green {
-  background: #1eb954;
+  /* background: #1eb954; */
+  background: #9d0b0b;
 }
 
 .hashtag-color {
-  background-color: #ff4f5b;
+  /* background-color: #ff4f5b; */
+  background-color: #da2d2d;
 }
 
 .white-text {
@@ -42,7 +44,8 @@ body {
 }
 
 .recipe-splash-title-box {
-  background-color: #ff8e96;
+  /* background-color: #ff8e96; */
+  background-color: #eb8242;
   color: white;
   text-align: left;
   padding: 23px 17px;
@@ -61,7 +64,8 @@ body {
 .play-circle-link {
   padding: 25px;
   border-radius: 50%;
-  background-color: #ff4f5a;
+  /* background-color: #ff4f5a; */
+  background-color: #da2d2d;
   margin-left: 1em;
   margin-right: 1em;
 }
