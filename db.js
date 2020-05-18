@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 let isConnected;
-const uriString = process.env.MONGO_DB_LINK;
+const uriString = process.env.SWEEZY_COOKING_MONGODB_URI;
 
 module.exports = connectToDatabaseModule = async () => {
   if (isConnected) {
