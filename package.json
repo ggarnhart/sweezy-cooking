@@ -13,7 +13,10 @@
     "number-to-words": "^1.2.4",
     "react": "16.13.1",
     "react-bootstrap": "^1.0.1",
+    "react-circular-progressbar": "^2.0.3",
     "react-dom": "16.13.1",
-    "react-feather": "^2.0.8"
+    "react-feather": "^2.0.8",
+    "react-reveal": "^1.2.2",
+    "swr": "^0.2.0"
   }
 }
