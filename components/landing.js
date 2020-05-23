@@ -120,7 +120,14 @@ class Landing extends Component {
     }
   };
   render() {
-    return <div>{this.renderContent()}</div>;
+    return (
+      <div>
+        <div className="nav-bar center-vertically">
+          <h3>Sweezy Cooking</h3>
+        </div>
+        {this.renderContent()}
+      </div>
+    );
   }
 }
 export default Landing;
