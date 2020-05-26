@@ -33,11 +33,11 @@ class IngredientFields extends Component {
     var ingredients = [];
     for (var i = 0; i < this.state.count; i++) {
       ingredients.push(
-        <Row key={`ingredient ${i}`}>
+        <Row key={`ingredient${i}`}>
           <Col>
             <div className="field">
               <input
-                name={`ingredient ${i} quantity`}
+                name={`ingredient${i}quantity`}
                 type="text"
                 placeholder="1/2 or 2"
               />
@@ -47,7 +47,7 @@ class IngredientFields extends Component {
           <Col>
             <div className="field">
               <input
-                name={`ingredient ${i} unit`}
+                name={`ingredient${i}unit`}
                 type="text"
                 placeholder="tsps, cups, or grams"
               />
@@ -56,14 +56,14 @@ class IngredientFields extends Component {
           <Col>
             <div className="field">
               <input
-                name={`ingredient ${i} type`}
+                name={`ingredient${i}type`}
                 type="text"
                 placeholder="flour or minced garlic"
               />
               <input
                 type="hidden"
-                value={`ingredientEND ${i}`}
-                name={`ingredientEND ${i}`}
+                value={`ingredientEND${i}`}
+                name={`ingredientEND${i}`}
               />
             </div>
           </Col>

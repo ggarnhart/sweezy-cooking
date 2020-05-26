@@ -5,7 +5,7 @@
       "actions": [
         {
           "type": "webhook",
-          "url": "https://4158dc59.ngrok.io/api/staticForm"
+          "url": "https://sweezy-cooking.ggarnhart.now.sh/api/staticForm"
         }
       ]
     }

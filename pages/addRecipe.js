@@ -59,12 +59,12 @@ export default function AddRecipe() {
           </Row>
           <Row>
             <Col>
-              <label className="field-label" htmlFor={"recipeTitle"}>
+              <label className="field-label" htmlFor={"recipe_title"}>
                 Recipe Title
               </label>
               <div className="field">
                 <input
-                  name="recipeTitle"
+                  name="recipe_title"
                   type="text"
                   placeholder="Recipe Title"
                 />
@@ -73,12 +73,12 @@ export default function AddRecipe() {
           </Row>
           <Row>
             <Col>
-              <label className="field-label" htmlFor={"recipeHashtag"}>
+              <label className="field-label" htmlFor={"recipe_hashtag"}>
                 Recipe Hashtag
               </label>
               <div className="field">
                 <input
-                  name="recipeHashtag"
+                  name="recipe_hashtag"
                   type="text"
                   placeholder="#sweezyHummus"
                 />
@@ -87,12 +87,12 @@ export default function AddRecipe() {
           </Row>
           <Row>
             <Col>
-              <label className="field-label" htmlFor={"recipeSong"}>
+              <label className="field-label" htmlFor={"spotify_link"}>
                 Recipe Song
               </label>
               <div className="field">
                 <input
-                  name="recipeSong"
+                  name="spotify_link"
                   type="text"
                   placeholder="https://open.spotify.com/track/2374M0fQpWi3dLnB54qaLX?si=GUUaIKXLTwSG7GKxa8j1LQ"
                 />
@@ -101,12 +101,12 @@ export default function AddRecipe() {
           </Row>
           <Row>
             <Col>
-              <label className="field-label" htmlFor={"recipeHeaderImage"}>
+              <label className="field-label" htmlFor={"main_image"}>
                 Recipe Image
               </label>
               <div className="field">
                 <input
-                  name="recipeHeaderImage"
+                  name="main_image"
                   type="text"
                   id={"recipeHeaderImage"}
                   placeholder="https://images.unsplash.com/photo-1585193273888-c687ecba807e"

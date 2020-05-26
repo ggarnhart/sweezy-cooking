@@ -34,7 +34,7 @@ class StepFields extends Component {
                 type="text"
                 placeholder="Heat the oven to 375 and pray..."
               />
-              <input hidden value={`step END ${i}`} name={`step END ${i}`} />
+              <input hidden value={`stepEND${i}`} name={`stepEND${i}`} />
             </div>
           </Col>
         </Row>

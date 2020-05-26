@@ -4,14 +4,21 @@ const RecipeSchema = mongoose.Schema({
   recipe_title: { type: String },
   spotify_link: { type: String },
   hashtag: { type: String },
+  count: { type: Number },
+  main_image: { type: String },
   ingredients: [
     {
-      quantity: { type: Number },
-      unit: { type: String },
-      type: { type: String },
+      quantity: { type: String, default: "" },
+      unit: { type: String, default: "" },
+      type: { type: String, default: "" },
     },
   ],
-  steps: [{ type: String }],
+  steps: [
+    {
+      step_instructions: { type: String },
+      step_photo: { type: String },
+    },
+  ],
 });
 
 global.RecipeSchema =
