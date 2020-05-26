@@ -14,6 +14,7 @@ module.exports = async (req, res) => {
       var main_image = "";
       var spotify_link = "";
       var recipe_hashtag = "";
+      var recipe_description = "";
 
       if (undefined !== data.recipe_title) {
         recipe_title = data.recipe_title;
@@ -30,7 +31,9 @@ module.exports = async (req, res) => {
       if (undefined !== data.recipe_hashtag) {
         recipe_hashtag = data.recipe_hashtag;
       }
-
+      if (undefined !== data.recipe_description) {
+        recipe_description = data.recipe_description;
+      }
       // now ingredients.
       var foundIngredientEnd = false;
       var i = 0;
@@ -82,6 +85,7 @@ module.exports = async (req, res) => {
         main_image,
         ingredients: ingredients,
         steps: steps,
+        recipe_description,
       });
       // console.log(recipe);
       await recipe.save();

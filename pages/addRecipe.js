@@ -114,6 +114,21 @@ export default function AddRecipe() {
               </div>
             </Col>
           </Row>
+          <Row>
+            <Col>
+              <label className="field-label" htmlFor={"recipe_description"}>
+                Recipe Description
+              </label>
+              <div className="field">
+                <input
+                  name="recipe_description"
+                  type="text"
+                  id={"recipeDescription"}
+                  placeholder="Chipotle, Cava, and Pei Wei have revolutionized fast-casual dining..."
+                />
+              </div>
+            </Col>
+          </Row>
           <IngredientFields />
           <StepFields />
           <br />

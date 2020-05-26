@@ -6,6 +6,7 @@ const RecipeSchema = mongoose.Schema({
   hashtag: { type: String },
   count: { type: Number },
   main_image: { type: String },
+  recipe_description: { type: String, default: "" },
   ingredients: [
     {
       quantity: { type: String, default: "" },
