@@ -119,11 +119,12 @@ export default function AddRecipe() {
               <label className="field-label" htmlFor={"recipe_description"}>
                 Recipe Description
               </label>
-              <div className="field">
-                <input
+
+              <div className="fieldTA">
+                <textarea
                   name="recipe_description"
+                  id="recipeDescription"
                   type="text"
-                  id={"recipeDescription"}
                   placeholder="Chipotle, Cava, and Pei Wei have revolutionized fast-casual dining..."
                 />
               </div>
