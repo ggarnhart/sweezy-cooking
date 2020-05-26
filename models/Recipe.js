@@ -7,6 +7,10 @@ const RecipeSchema = mongoose.Schema({
   count: { type: Number },
   main_image: { type: String },
   recipe_description: { type: String, default: "" },
+  tagline: { type: String, default: "" },
+  time: { type: String, default: "" },
+  servings: { type: String, default: "" },
+  video_link: { type: String, default: "" },
   ingredients: [
     {
       quantity: { type: String, default: "" },

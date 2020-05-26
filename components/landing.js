@@ -1,6 +1,7 @@
 import { Row, Col, Container } from "react-bootstrap";
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
+import Moment from "react-moment";
 
 class Landing extends Component {
   state = {
@@ -41,7 +42,7 @@ class Landing extends Component {
                 36% 128%,
                 rgba(86, 86, 86, 0.4) 37%,
                 rgba(86, 86, 86, 0.7) 100%
-              ), url(${this.state.displayArray[0].image})`,
+              ), url(${this.state.displayArray[0].main_image})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
@@ -51,12 +52,14 @@ class Landing extends Component {
               <Col>
                 <Fade bottom>
                   <h6 className="heaviest heavier">
-                    {this.state.displayArray[0].date}
+                    <Moment format="MMMM DD, YYYY">
+                      {this.state.displayArray[0].date_added}
+                    </Moment>
                   </h6>
                   <h1 className="lighter">
-                    {this.state.displayArray[0].title}
+                    {this.state.displayArray[0].recipe_title}
                   </h1>
-                  <p>{this.state.displayArray[0].description}</p>
+                  <p>{this.state.displayArray[0].recipe_description}</p>
                 </Fade>
               </Col>
             </Row>
@@ -68,12 +71,16 @@ class Landing extends Component {
   renderOverlapItems = () => {
     if (
       this.state.displayArray.length > 1 &&
-      undefined !== this.state.displayArray[0].date
+      undefined !== this.state.displayArray[0].date_added
     ) {
       var items = [];
       for (var i = 1; i < this.state.displayArray.length; i++) {
         items.push(
-          <Col lg={3} md={6} key={`${i} ${this.state.displayArray[i].title}`}>
+          <Col
+            lg={3}
+            md={6}
+            key={`${i} ${this.state.displayArray[i].recipe_title}`}
+          >
             <div
               className="overlap-item"
               style={{
@@ -81,17 +88,23 @@ class Landing extends Component {
                 36% 128%,
                 rgba(86, 86, 86, 0.6) 37%,
                 rgba(86, 86, 86, 0.6) 100%
-              ), url(${this.state.displayArray[i].image})`,
+              ), url(${this.state.displayArray[i].main_image})`,
                 backgroundPosition: "center",
                 backgroundSize: "cover",
               }}
             >
               <Fade bottom>
                 <h6 className="heaviest heavier">
-                  {this.state.displayArray[i].date}
+                  <Moment format="MMMM DD, YYYY">
+                    {this.state.displayArray[i].date_added}
+                  </Moment>
                 </h6>
-                <h3 className="lighter">{this.state.displayArray[i].title}</h3>
-                <p>{this.state.displayArray[i].description}</p>
+                <h3 className="lighter">
+                  {this.state.displayArray[i].recipe_title}
+                </h3>
+                <p className="overlap-item-description">
+                  {this.state.displayArray[i].tagline}
+                </p>
               </Fade>
             </div>
           </Col>

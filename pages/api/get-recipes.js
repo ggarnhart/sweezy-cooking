@@ -4,7 +4,7 @@ const Recipe = require("../../models/Recipe");
 module.exports = async (req, res) => {
   try {
     await connectToDatabaseModule();
-    var recipes = Recipe.find();
+    var recipes = await Recipe.find();
     res.send(recipes);
   } catch (e) {
     console.log(e);

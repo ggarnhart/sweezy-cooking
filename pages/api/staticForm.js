@@ -4,17 +4,35 @@ const Recipe = require("../../models/Recipe");
 module.exports = async (req, res) => {
   const data = req.body.data;
 
-  // console.log(data);
-
   if (data.password === "sweezy") {
     try {
       await connectToDatabaseModule();
+
+      var count = await Recipe.find().countDocuments();
+      count = count + 1;
 
       var recipe_title = "";
       var main_image = "";
       var spotify_link = "";
       var recipe_hashtag = "";
       var recipe_description = "";
+      var servings = "";
+      var time = "";
+      var tagline = "";
+      var video_link = "";
+      if (undefined !== data.video_link) {
+        video_link = data.video_link;
+      }
+
+      if (undefined !== data.tagline) {
+        tagline = data.tagline;
+      }
+      if (undefined !== time) {
+        time = data.time;
+      }
+      if (undefined !== data.servings) {
+        servings = String(data.servings);
+      }
 
       if (undefined !== data.recipe_title) {
         recipe_title = data.recipe_title;
@@ -86,8 +104,13 @@ module.exports = async (req, res) => {
         ingredients: ingredients,
         steps: steps,
         recipe_description,
+        time,
+        servings,
+        tagline,
+        video_link,
+        count,
       });
-      // console.log(recipe);
+
       await recipe.save();
       res.status(200).send("Ok!");
     } catch (e) {

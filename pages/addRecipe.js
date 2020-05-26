@@ -72,7 +72,7 @@ export default function AddRecipe() {
             </Col>
           </Row>
           <Row>
-            <Col>
+            <Col sm={12} md={6}>
               <label className="field-label" htmlFor={"recipe_hashtag"}>
                 Recipe Hashtag
               </label>
@@ -84,9 +84,23 @@ export default function AddRecipe() {
                 />
               </div>
             </Col>
+
+            <Col sm={12} md={6}>
+              <label className="field-label" htmlFor={"tagline"}>
+                Recipe Tagline
+              </label>
+              <div className="field">
+                <input
+                  name="tagline"
+                  type="text"
+                  id={"tagline"}
+                  placeholder="A quick, zesty dish."
+                />
+              </div>
+            </Col>
           </Row>
           <Row>
-            <Col>
+            <Col md={4} sm={12}>
               <label className="field-label" htmlFor={"spotify_link"}>
                 Recipe Song
               </label>
@@ -98,9 +112,7 @@ export default function AddRecipe() {
                 />
               </div>
             </Col>
-          </Row>
-          <Row>
-            <Col>
+            <Col md={4} sm={12}>
               <label className="field-label" htmlFor={"main_image"}>
                 Recipe Image
               </label>
@@ -113,7 +125,21 @@ export default function AddRecipe() {
                 />
               </div>
             </Col>
+            <Col>
+              <label className="field-label" htmlFor={"recipe_video"}>
+                Recipe Video
+              </label>
+              <div className="field">
+                <input
+                  name="recipe_video"
+                  type="text"
+                  id={"recipe_video"}
+                  placeholder="https://vm.tiktok.com/K1JaHc/"
+                />
+              </div>
+            </Col>
           </Row>
+
           <Row>
             <Col>
               <label className="field-label" htmlFor={"recipe_description"}>
@@ -126,6 +152,35 @@ export default function AddRecipe() {
                   id="recipeDescription"
                   type="text"
                   placeholder="Chipotle, Cava, and Pei Wei have revolutionized fast-casual dining..."
+                />
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col>
+              <label className="field-label" htmlFor={"servings"}>
+                Estimated Servings
+              </label>
+              <div className="field">
+                <input
+                  name="servings"
+                  type="number"
+                  id={"tagline"}
+                  placeholder="4"
+                />
+              </div>
+            </Col>
+            <Col>
+              <label className="field-label" htmlFor={"time"}>
+                Duration
+              </label>
+              <div className="field">
+                <input
+                  name="time"
+                  type="text"
+                  id={"time"}
+                  placeholder="1 hour and 20 minutes"
                 />
               </div>
             </Col>
