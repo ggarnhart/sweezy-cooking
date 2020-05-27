@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import Moment from "react-moment";
 import Link from "next/link";
+import Equipment from "./equipment";
 
 class Landing extends Component {
   state = {
@@ -36,10 +37,7 @@ class Landing extends Component {
   renderFirstItem = () => {
     if (this.state.displayArray.length > 0)
       return (
-        <Link
-          className="recipe-link"
-          href={`/recipe/${this.state.displayArray[0].count}`}
-        >
+        <Link href={`/recipe/${this.state.displayArray[0].count}`}>
           <div
             className="recipe-link landing-main spotify-green center-vertically"
             style={{
@@ -50,6 +48,7 @@ class Landing extends Component {
               ), url(${this.state.displayArray[0].main_image})`,
               backgroundPosition: "center",
               backgroundSize: "cover",
+              key: this.state.displayArray[0].count,
             }}
           >
             <Container>
@@ -61,7 +60,7 @@ class Landing extends Component {
                         {this.state.displayArray[0].date_added}
                       </Moment>
                     </h6>
-                    <h1 className="lighter">
+                    <h1 className="lighter serif">
                       {this.state.displayArray[0].recipe_title}
                     </h1>
                     <p>{this.state.displayArray[0].recipe_description}</p>
@@ -82,7 +81,10 @@ class Landing extends Component {
       var items = [];
       for (var i = 1; i < this.state.displayArray.length; i++) {
         items.push(
-          <Link href={`/recipe/${this.state.displayArray[i].count}`}>
+          <Link
+            href={`/recipe/${this.state.displayArray[i].count}`}
+            key={this.state.displayArray[i].count}
+          >
             <Col
               lg={3}
               md={6}
@@ -106,7 +108,7 @@ class Landing extends Component {
                       {this.state.displayArray[i].date_added}
                     </Moment>
                   </h6>
-                  <h3 className="lighter">
+                  <h3 className="lighter serif">
                     {this.state.displayArray[i].recipe_title}
                   </h3>
                   <p className="overlap-item-description">
@@ -131,9 +133,11 @@ class Landing extends Component {
       return (
         <div>
           {this.renderFirstItem()}
+
           <Container>
             <Row className="overlap">{this.renderOverlapItems()}</Row>
           </Container>
+          {/* <Equipment /> */}
         </div>
       );
     } else {

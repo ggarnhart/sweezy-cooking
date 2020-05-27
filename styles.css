@@ -20,7 +20,9 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 200;
 }
-
+.serif {
+  font-family: "Playfair Display", serif;
+}
 .full-height {
   height: 100vh;
 }
@@ -34,6 +36,10 @@ body {
 }
 .heaviest {
   font-weight: bold;
+}
+.text-center,
+.center-text {
+  text-align: center;
 }
 
 .lighter {
@@ -334,4 +340,8 @@ body {
 
 .recipe-link {
   cursor: pointer;
+}
+/* equipment */
+.equipment {
+  margin-top: 2em;
 }
