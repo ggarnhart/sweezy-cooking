@@ -11,6 +11,7 @@ const RecipeSchema = mongoose.Schema({
   time: { type: String, default: "" },
   servings: { type: String, default: "" },
   video_link: { type: String, default: "" },
+  spotify_title: { type: String, default: "" },
   ingredients: [
     {
       quantity: { type: String, default: "" },

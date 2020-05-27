@@ -14,12 +14,16 @@ module.exports = async (req, res) => {
       var recipe_title = "";
       var main_image = "";
       var spotify_link = "";
-      var recipe_hashtag = "";
+      var spotify_title = "",
+      var hashtag = "";
       var recipe_description = "";
       var servings = "";
       var time = "";
       var tagline = "";
       var video_link = "";
+      if(undefined !== data.spotify_title){
+        spotify_title = data.spotify_title;
+      }
       if (undefined !== data.video_link) {
         video_link = data.video_link;
       }
@@ -47,7 +51,7 @@ module.exports = async (req, res) => {
       }
 
       if (undefined !== data.recipe_hashtag) {
-        recipe_hashtag = data.recipe_hashtag;
+        hashtag = data.recipe_hashtag;
       }
       if (undefined !== data.recipe_description) {
         recipe_description = data.recipe_description;
@@ -98,7 +102,7 @@ module.exports = async (req, res) => {
 
       var recipe = new Recipe({
         recipe_title,
-        recipe_hashtag,
+        hashtag,
         spotify_link,
         main_image,
         ingredients: ingredients,

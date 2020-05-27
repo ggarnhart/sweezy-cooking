@@ -1,6 +1,7 @@
 import Head from "next/head";
 import useSWR from "swr";
 import Landing from "../components/landing";
+import { Spinner } from "react-bootstrap";
 import { render } from "react-dom";
 
 function fetcher(url) {
@@ -13,10 +14,14 @@ export default function Home() {
 
     if (data) {
       return <Landing data={data} />;
-    }
-
-    if (error) {
+    } else if (error) {
       // do something.
+    } else {
+      return (
+        <div className="full-height off-white-background center-everything">
+          <Spinner animation="border" />
+        </div>
+      );
     }
   }
 

@@ -5,31 +5,6 @@ import Ingredients from "../components/ingredients";
 import RecipeStep from "../components/recipeStep";
 import HashtagSquare from "../components/hashtagSquare";
 export default function Recipe() {
-  var ingArr = [
-    {
-      amount: 1,
-      unit: "cup",
-      ingredient: "flour",
-    },
-    {
-      amount: 2,
-      unit: "cups",
-      ingredient: "sugar",
-    },
-    { amount: 3, unit: "tsp", ingredient: "espresso" },
-  ];
-  var exSteps = [
-    {
-      imageLink:
-        "https://images.unsplash.com/photo-1506238359040-22480587eb7a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80",
-      details:
-        "Start by preheating your coffee to 375 degrees because it is probably cold by now. That said, 375 degrees is a little hot. Let's not burn ourselves, eh?",
-    },
-    {
-      details:
-        "Now that your coffee is hot, we're gonna want to cool it down by putting some ice in it. Just a thought.",
-    },
-  ];
   function renderSteps(steps) {
     var i = 0;
     var stepComponents = steps.map(function (step) {
@@ -43,7 +18,13 @@ export default function Recipe() {
           />
         );
       } else {
-        return <RecipeStep stepCount={i} details={step.details} />;
+        return (
+          <RecipeStep
+            imageLink={step.imageLink}
+            stepCount={i}
+            details={step.details}
+          />
+        );
       }
     });
     return stepComponents;

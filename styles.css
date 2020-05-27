@@ -54,6 +54,13 @@ body {
   justify-content: center;
 }
 
+.center-everything {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .margin-right {
   margin-right: auto;
 }
@@ -323,4 +330,8 @@ body {
 
 .recipe-form {
   padding-bottom: 10vh;
+}
+
+.recipe-link {
+  cursor: pointer;
 }

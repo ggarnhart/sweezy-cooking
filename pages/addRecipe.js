@@ -100,9 +100,9 @@ export default function AddRecipe() {
             </Col>
           </Row>
           <Row>
-            <Col md={4} sm={12}>
+            <Col md={6} sm={12}>
               <label className="field-label" htmlFor={"spotify_link"}>
-                Recipe Song
+                Recipe Song URL
               </label>
               <div className="field">
                 <input
@@ -112,7 +112,17 @@ export default function AddRecipe() {
                 />
               </div>
             </Col>
-            <Col md={4} sm={12}>
+            <Col md={6} sm={12}>
+              <label className="field-label" htmlFor="">
+                Recipe Song Title
+              </label>
+              <div className="field">
+                <input name="spotify_title" type="text" placeholder="Africa" />
+              </div>
+            </Col>{" "}
+          </Row>
+          <Row>
+            <Col md={6} sm={12}>
               <label className="field-label" htmlFor={"main_image"}>
                 Recipe Image
               </label>
@@ -125,7 +135,7 @@ export default function AddRecipe() {
                 />
               </div>
             </Col>
-            <Col>
+            <Col md={6} sm={12}>
               <label className="field-label" htmlFor={"recipe_video"}>
                 Recipe Video
               </label>
