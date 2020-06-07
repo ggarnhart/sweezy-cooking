@@ -15,7 +15,8 @@ export default function Home() {
     if (data) {
       return <Landing data={data} />;
     } else if (error) {
-      // do something.
+      console.log(error);
+      return <h1>Hello. there was an error. Oh no!</h1>;
     } else {
       return (
         <div className="full-height off-white-background center-everything">

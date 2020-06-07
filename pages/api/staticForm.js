@@ -14,14 +14,14 @@ module.exports = async (req, res) => {
       var recipe_title = "";
       var main_image = "";
       var spotify_link = "";
-      var spotify_title = "",
+      var spotify_title = "";
       var hashtag = "";
       var recipe_description = "";
       var servings = "";
       var time = "";
       var tagline = "";
       var video_link = "";
-      if(undefined !== data.spotify_title){
+      if (undefined !== data.spotify_title) {
         spotify_title = data.spotify_title;
       }
       if (undefined !== data.video_link) {

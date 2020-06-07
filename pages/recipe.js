@@ -43,7 +43,7 @@ export default function Recipe() {
           link="https://open.spotify.com/track/0mJQlCl9YgxW7kyeltNiVk?si=dM9msNzoSTCkWRunc0JZAg"
           songTitle="Touch of Grey"
         />
-        <Ingredients indgredientArray={ingArr} />
+        {/* <Ingredients indgredientArray={} /> */}
 
         <h2 className="heaviest margin-top-header">Recipe</h2>
         {renderSteps(exSteps)}
