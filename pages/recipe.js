@@ -46,7 +46,7 @@ export default function Recipe() {
         {/* <Ingredients indgredientArray={} /> */}
 
         <h2 className="heaviest margin-top-header">Recipe</h2>
-        {renderSteps(exSteps)}
+        {/* {renderSteps(exSteps)} */}
 
         <HashtagSquare hashtag="sweezyHummus" />
       </Container>
