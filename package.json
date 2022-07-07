@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@statickit/react": "^2.1.1",
-    "moment": "^2.26.0",
+    "moment": "^2.29.4",
     "mongoose": "^5.9.14",
     "next": "9.4.0",
     "number-to-words": "^1.2.4",
